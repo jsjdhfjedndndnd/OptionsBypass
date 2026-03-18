@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Among Us Config Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Режим -->
+    <div class="mode-switch">
+        <button id="btn-classic" class="active" title="Режим редактирования Классики">Классика</button>
+        <button id="btn-hide" title="Режим редактирования Пряток">Прятки</button>
+    </div>
+    <div class="copy-paste">
+        <button id="copyBtn" title="Копировать">Copy</button>
+        <button id="pasteBtn" title="Вставить">Paste</button>
+    </div>
+    <!-- Base64 -->
+    <div>
+        <textarea id="base64Input" placeholder="Вставь Base64"></textarea>
+    </div>
+
+
+    <!-- Параметры класика -->
+    <div id="classic-params" class="params-group">
+        <div class="control-item">
+            <div class="label-type">Тип</div>
+            <div class="label-name">Название</div>
+            <input class="input" type="number" value="0" step="0.5">
+        </div>
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">Между убийствами</div>
+            <input class="input" type="number" value="0" step="0.5" data-offset="25" data-type="float">
+        </div>
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">Дальность обзора предателя</div>
+            <input class="input" type="number" value="0" step="0.5" data-offset="21" data-type="float">
+        </div>
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">Дальность обзора экипажа</div>
+            <input class="input" type="number" value="0" step="0.5" data-offset="17" data-type="float">
+        </div>
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">Скорость</div>
+            <input class="input" type="number" value="0" step="0.5" data-offset="13" data-type="float">
+        </div>
+        <div class="control-item">
+            <div class="label-type">int</div>
+            <div class="label-name">Срочных собраний</div>
+            <input class="input" type="number" value="0" step="1" data-offset="32" data-type="int">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Перерыв между собраниями</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="47" data-type="byte">
+        </div>
+        <div class="control-item">
+            <div class="label-type">int</div>
+            <div class="label-name">Время на обсуждение</div>
+            <input class="input" type="number" value="0" step="1" data-offset="38" data-type="int">
+        </div>
+        <div class="control-item">
+            <div class="label-type">int</div>
+            <div class="label-name">Время на голосование</div>
+            <input class="input" type="number" value="0" step="1" data-offset="42" data-type="int">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Обычных заданий</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="29" data-type="byte">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Долгих заданий</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="30" data-type="byte">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Быстрых заданий</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="31" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Ученый: перезарядка панели</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="71" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Ученый: время работы батареи</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="72" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Ангел: перезарядка щита</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="80" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Ангел: время действия щита</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="81" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Инженер: перезарядка люка</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="90" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Инженер: макс время в люке</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="91" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Паникёр: длительность сигнала</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="99" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Следопыт: перезарядка слежки</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="117" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Следопыт: задержка слежки</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="119" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Следопыт: длительность слежки</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="118" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">byte</div>
+            <div class="label-nameCREW">Детектив: подозреваемые</div>
+            <input class="inputCREW" type="number" value="0" step="1" min="0" max="255" data-offset="127" data-type="byte">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">byte</div>
+            <div class="label-nameIMP">Оборотень: длительность морфа</div>
+            <input class="inputIMP" type="number" value="0" step="1" min="0" max="255" data-offset="63" data-type="byte">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">byte</div>
+            <div class="label-nameIMP">Оборотень: перезарядка морфа</div>
+            <input class="inputIMP" type="number" value="0" step="1" min="0" max="255" data-offset="62" data-type="byte">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">byte</div>
+            <div class="label-nameIMP">Фантом: длительность инвиза</div>
+            <input class="inputIMP" type="number" value="0" step="1" min="0" max="255" data-offset="109" data-type="byte">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">byte</div>
+            <div class="label-nameIMP">Фантом: перезарядка инвиза</div>
+            <input class="inputIMP" type="number" value="0" step="1" min="0" max="255" data-offset="108" data-type="byte">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">byte</div>
+            <div class="label-nameIMP">Гадюка: время растворения</div>
+            <input class="inputIMP" type="number" value="0" step="1" min="0" max="255" data-offset="135" data-type="byte">
+        </div>
+    </div>
+
+
+
+    <div id="hide-params" class="params-group" style="display: none;">
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">прятки не готовы</div>
+            <input type="number" value="0" step="0.5" >
+        </div>
+    </div>
+    <h5>ТГК: <a href="https://t.me/EHRsus" style="color: #7BCDEC">EHRsus</a></h5>
+    <h5>Рекомендуем не указывать слишком больше значение в float и int, иначе будут баги</h5>
+    <script src="index.js"></script>
+
+</body>
+</html>
