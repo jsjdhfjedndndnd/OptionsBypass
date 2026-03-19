@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptionsBypass</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Режим -->
+    <div class="mode-switch">
+        <a href="https://jsjdhfjedndndnd.github.io/OptionsBypass/"><button id="btn-classic" title="Режим редактирования Классики">Классика</button></a>
+        <button id="btn-hide" class="active" title="Режим редактирования Пряток">Прятки</button>
+    </div>
+    <div class="copy-paste">
+		<p>ИСПОЛЬЗУЙТЕ ТОЛЬКО ЭТИ КНОПКИ ДЛЯ КОПИРВОАНИЯ И ВСТАВКИ</p>
+        <button id="copyBtn" title="Копировать">Copy</button>
+        <button id="pasteBtn" title="Вставить">Paste</button>
+    </div>
+    <!-- Base64 -->
+    <div>
+        <textarea id="base64Input" placeholder="Вставь Base64"></textarea>
+    </div>
+
+
+    <!-- Параметры класика -->
+    <div>
+        <div class="control-item">
+            <div class="label-type">Тип</div>
+            <div class="label-name">Название</div>
+            <input class="input" type="number" value="0" step="0.5">
+        </div>
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">Скорость</div>
+            <input class="input" type="number" value="0" step="0.5" data-offset="13" data-type="float">
+        </div>
+        <div class="control-item">
+            <div class="label-type">float</div>
+            <div class="label-name">Время на побег</div>
+            <input class="input" type="number" value="0" step="0.5" data-offset="33" data-type="float">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Обычных заданий</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="25" data-type="byte">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Долгих заданий</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="26" data-type="byte">
+        </div>
+        <div class="control-item">
+            <div class="label-type">byte</div>
+            <div class="label-name">Быстрых заданий</div>
+            <input class="input" type="number" value="0" step="1" min="0" max="255" data-offset="27" data-type="byte">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">float</div>
+            <div class="label-nameCREW">Дальность обзора мирных</div>
+            <input class="inputCREW" type="number" value="0" step="0.5" data-offset="17" data-type="float">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">int</div>
+            <div class="label-nameCREW">Уходов в люк</div>
+            <input class="inputCREW" type="number" value="0" step="1" data-offset="29" data-type="int">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">float</div>
+            <div class="label-nameCREW">Макс время в люке</div>
+            <input class="inputCREW" type="number" value="0" step="0.5" data-offset="65" data-type="float">
+        </div>
+        <div class="control-itemCREW">
+            <div class="label-typeCREW">float</div>
+            <div class="label-nameCREW">Размер фонарика мирных</div>
+            <input class="inputCREW" type="number" value="0" step="0.5" data-offset="41" data-type="float">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">float</div>
+            <div class="label-nameIMP">Размер фонарика предателя</div>
+            <input class="inputIMP" type="number" value="0" step="0.5" data-offset="37" data-type="float">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">float</div>
+            <div class="label-nameIMP">Дальность обзора предателя</div>
+            <input class="inputIMP" type="number" value="0" step="0.5" data-offset="21" data-type="float">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">float</div>
+            <div class="label-nameIMP">Скорость преда в финальных прятках</div>
+            <input class="inputIMP" type="number" value="0" step="0.5" data-offset="51" data-type="float">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">float</div>
+            <div class="label-nameIMP">Время между сигналами</div>
+            <input class="inputIMP" type="number" value="0" step="0.5" data-offset="61" data-type="float">
+        </div>
+        <div class="control-itemIMP">
+            <div class="label-typeIMP">float</div>
+            <div class="label-nameIMP">Время на финальные прятки</div>
+            <input class="inputIMP" type="number" value="0" step="0.5" data-offset="47" data-type="float">
+        </div>
+    </div>
+
+
+    <h5>ТГК: <a href="https://t.me/EHRsus" style="color: #7BCDEC">EHRsus</a></h5>
+    <h5>Рекомендуем:<br>Не указывать слишком больше значение в float и int, иначе будут баги.<br>Использовать сайт в альбомной ориентации</h5>
+	<h5>OptionsBypass by STOL700</h5>
+    <script src="../index.js"></script>
+
+</body>
+</html>
